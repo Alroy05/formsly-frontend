@@ -139,8 +139,11 @@ function App() {
           </motion.div>
         </div>
 
-        <footer className="mt-8 md:mt-12 py-4 text-center text-sm opacity-80">
-          <p>© 2025 - Formsly | Created by Alroy Pereira</p>
+        <footer className="mt-8 md:mt-12 py-4 text-center text-sm">
+          <p>Created with 💖 by Alroy Pereira<br /> Frontend Repository: <a href="https://github.com/Alroy05/formsly-frontend" className='text-blue-500 underline'>https://github.com/Alroy05/formsly-frontend</a><br />
+          Backend Repository: <a href="https://github.com/Alroy05/formsly-backend" className='text-blue-500 underline'>https://github.com/Alroy05/formsly-backend</a>
+          <br /><p>Tech Stack: React, TailwindCSS, Zustand, React-Hock-Form, Express, MongoDB, JSONWebToken</p>
+           </p>
           
         </footer>
       </div>
