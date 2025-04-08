@@ -12,7 +12,7 @@ const useStore = create((set, get) => ({
   
   checkAuth: async () => {
     try {
-      const response = await axios.get(`${API_URL}/check-auth`, {
+      const response = await axios.get(`${API_URL}/api/check-auth`, {
         withCredentials: true
       });
       
@@ -34,7 +34,7 @@ const useStore = create((set, get) => ({
   
   login: async (credentials) => {
     try {
-      const response = await axios.post(`${API_URL}/admin/login`, credentials, {
+      const response = await axios.post(`${API_URL}/api/admin/login`, credentials, {
         withCredentials: true
       });
       
@@ -55,7 +55,7 @@ const useStore = create((set, get) => ({
   // Submit feedback
   submitFeedback: async (feedbackData) => {
     try {
-      const response = await axios.post(`${API_URL}/submit-feedback`, feedbackData);
+      const response = await axios.post(`${API_URL}/api/submit-feedback`, feedbackData);
       
       if (response.data.success) {
         if (get().feedbacks.length > 0) {
@@ -74,7 +74,7 @@ const useStore = create((set, get) => ({
   
   fetchFeedbacks: async () => {
     try {
-      const response = await axios.get(`${API_URL}/feedbacks`, {
+      const response = await axios.get(`${API_URL}/api/feedbacks`, {
         withCredentials: true
       });
       
