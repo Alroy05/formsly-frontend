@@ -1,12 +1,83 @@
-# React + Vite
+# Formsly Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the frontend code for Formsly, a web application built using React and Vite.
 
-Currently, two official plugins are available:
+   ```bash
+    https://formsly.netlify.app/
+   ```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The project is organized as follows:
+
+```
+formsly-frontend/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+|   |   ├──AdminLogin.jsx
+|   |   ├──FeedbackForm.jsx
+|   |   └──FeedbackList.jsx
+│   ├── App.jsx
+|   ├── store.js
+│   └── main.jsx
+├── .gitignore
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+- `public/`: Contains static assets and the main `index.html` file.
+- `src/`: Contains the React application source code.
+  - `assets/`: Stores images, fonts, and other static assets.
+  - `components/`: Contains reusable React components.
+  - `pages/`: Contains React components that represent different pages.
+  - `App.jsx`: The root component that defines the main application structure.
+  - `main.jsx`: The entry point that renders the `App` component.
+- `.gitignore`: Specifies files and directories to be ignored by Git.
+- `index.html`: The main HTML file that includes the React application.
+- `package.json`: Manages project dependencies and scripts.
+- `vite.config.js`: Configuration file for Vite.
+- `README.md`: This file.
+
+## Tech Stack
+
+The project utilizes the following technologies:
+
+- **React**: A JavaScript library for building user interfaces.
+- **Vite**: A fast build tool and development server for modern web projects.
+- **ESLint**: A tool for identifying and fixing linting issues in JavaScript code.
+
+## Deployment Steps
+
+To deploy the Formsly frontend application, follow these steps:
+
+1. **Install Dependencies**: Ensure you have [Node.js](https://nodejs.org/) installed. Then, run:
+
+   ```bash
+   npm install
+   ```
+
+2. **Build the Application**: Create an optimized production build:
+
+   ```bash
+   npm run build
+   ```
+
+   This will generate a `dist/` directory containing the compiled files.
+
+3. **Deploy to Production**: Upload the contents of the `dist/` directory to your preferred hosting service, such as [Netlify](https://www.netlify.com/) or [Vercel](https://vercel.com/).
+
+## Development
+
+To start the development server:
+
+```bash
+npm run dev
+```
+
+This will start the Vite development server, and you can view the application at `http://localhost:5173`.
+
