@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-inter: 'Inter', 'sans-serif';
+}
+
+body {
+  @apply font-sans;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500;
+}
+
+/* Glassmorphism effect */
+.glass {
+  @apply backdrop-blur-lg bg-white/20 border border-white/30 shadow-xl;
+}
+
+.dark .glass {
+  @apply backdrop-blur-lg bg-gray-900/30 border border-gray-700/50 shadow-xl;
+}
